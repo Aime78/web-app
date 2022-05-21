@@ -5,28 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="add-product-style.css">
+    <script src="main.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300&display=swap" rel="stylesheet">
     <title>addproduct</title>
 </head>
 <body>
     <div class="header">
         <h3>Product Add</h3>
         <div class="btn-container">
-            <button class="btn-add">Save</button>
+           
             <button class="btn-delete">Cancel</button>
         </div>
     </div>
     <div class="main-container">
-        <form>
-            <label>SKU</label>
-            <input type="text" name="sku">
+        <div class="error-message"></div>
+        
+        <form id="product_form">
+            <div class="product-input">
+                <label>SKU</label>
+                <input type="text" name="sku" class="text" id="sku" autocomplete="off" autofocus="on">
+                <span class="sku-control"></span>
+            </div>
+            <div class="product-input">
+                <label>Name</label>
+                <input type="text" name="name" class="text" id="name" autocomplete="off">
+                <span class="name-control"></span>
+            </div>
+            <div class="product-input">
+                <label>Price($)</label>
+                <input type="number" name="Price" class="text" id="price">
+                <span class="price-control"></span>
+            </div>
+            <div class="product-input">
+                <label for="product-type">Product type</label>
+                <select name="type" id="productType">
+                    <option value="dvd">DVD</option>
+                    <option value="book">Book</option>
+                    <option value="furniture">Furniture</option>
+                </select>
+            </div>
+            <div class="product-input product-specs">
 
-            <label>Name</label>
-            <input type="text" name="name">
-
-            <label>Price ($)</label>
-            <input type="text" name="Price">
+            </div>
+            <button type="submit" class="btn-add">Save</button>
 
         </form>
+    </div>
+    <div class="footer">
+        Scandiweb Test assignment
     </div>
 </body>
 </html>
